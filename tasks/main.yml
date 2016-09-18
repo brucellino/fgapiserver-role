@@ -1,2 +1,10 @@
 ---
 # tasks file for fgapiserver
+- name: get the source code
+  git:
+    repo: https://github.com/FutureGateway/fgAPIServer
+    dest: "{{ api_server_install_path }}"
+
+# - name: set some variables
+#
+# - name: start the server

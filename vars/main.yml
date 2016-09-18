@@ -1,2 +1,5 @@
 ---
 # vars file for fgapiserver
+
+# the path to where the web-facing API server will be installed
+api_server_install_path: /tmp/apiserver
