@@ -19,8 +19,6 @@
     name: "{{ sys_prereq }}"
     state: present
 
-
-
 - name: get the source code
   git:
     repo: https://github.com/FutureGateway/fgAPIServer
@@ -36,6 +34,10 @@
   pip:
     requirements: "{{ api_server_install_path }}/requirements.txt"
 
-# - name: set some variables
-#
+- name: Apply configuration template.
+  template:
+    src: fgapiserver.conf.j2
+    dest: "{{ api_server_install_path }}/fgapiserver.conf"
+
+
 # - name: start the server
