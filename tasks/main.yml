@@ -16,7 +16,9 @@
 # tasks file for fgapiserver
 - name: Install mysql dependencies
   package:
-    - name: mysql-server
+    name: mysql-server
+    state: present
+
 
 
 - name: get the source code
