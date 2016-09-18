@@ -21,7 +21,7 @@
 
 - name: install python requirements
   pip:
-    requirements: "{{ api_server_install_path }}/fgAPIServer/requirements.txt"
+    requirements: "{{ api_server_install_path }}/requirements.txt"
 
 # - name: set some variables
 #
