@@ -1,6 +1,8 @@
 ---
 # vars file for fgapiserver
-
+sys_prereq:
+  - mysql-server
+  - mysql-devel
 # the path to where the web-facing API server will be installed
 api_server_install_path: /tmp/apiserver
-db_password: 
+db_password:
