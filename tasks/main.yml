@@ -22,7 +22,7 @@
 - name: get the source code
   git:
     repo: https://github.com/FutureGateway/fgAPIServer
-    dest: "{{ api_server_install_path }}"
+    dest: "{{ install_path }}"
 
 - name: Install URLlib3 (CentOS6)
   pip:
@@ -32,7 +32,7 @@
     ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6'
 - name: install python requirements
   pip:
-    requirements: "{{ api_server_install_path }}/requirements.txt"
+    requirements: "{{ install_path }}/requirements.txt"
 
 - name: Apply configuration template.
   template:
