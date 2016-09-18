@@ -37,7 +37,7 @@
 - name: Apply configuration template.
   template:
     src: fgapiserver.conf.j2
-    dest: "{{ api_server_install_path }}/fgapiserver.conf"
+    dest: "{{ install_path }}/fgapiserver.conf"
 
 
 # - name: start the server
