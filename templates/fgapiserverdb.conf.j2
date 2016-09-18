@@ -1,0 +1,37 @@
+#
+# FutureGateway API Server configuration file
+#
+# Author: riccardo.bruno@ct.infn.it
+# Template: Bruce Becker bbecker@csir.co.za
+
+# fgapiserver settings
+[fgapiserver]
+fgapiver            = {{ ver }}
+fgapiserver_name    = {{ name }}
+fgapisrv_host       = {{ host }}
+fgapisrv_port       = {{ port }}
+fgapisrv_debug      = {{ debug }}
+fgapisrv_iosandbox  = {{ iosandbox }}
+fgapisrv_geappid    = {{ geappid }}
+fgjson_indent       = {{ json_indent }}
+fgapisrv_key        =
+fgapisrv_crt        =
+fgapisrv_logcfg     = {{ logcfg }}
+fgapisrv_dbver      = {{ dbver }}
+fgapisrv_secret     = {{ secret }}
+fgapisrv_notoken    = {{ notoken }}
+fgapisrv_notokenusr = {{ notokenusr }}
+fgapisrv_lnkptvflag = {{ lnkptvflag }}
+fgapisrv_ptvendpoint= {{ ptvendpoint }}
+fgapisrv_ptvuser    = {{ ptvuser }}
+fgapisrv_ptvpass    = {{ ptvpass }}
+fgapisrv_ptvdefusr  = {{ ptvdefusr }}
+fgapisrv_ptvmapfile = {{ ptvmapfile }}
+
+# geapiserver database settings
+[fgapiserver_db]
+fgapisrv_db_host = {{ db_host }}
+fgapisrv_db_port = {{ db_port }}
+fgapisrv_db_user = {{ db_user }}
+fgapisrv_db_pass = {{ db_pass }}
+fgapisrv_db_name = {{ db_name }}
