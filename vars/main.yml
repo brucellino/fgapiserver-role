@@ -24,7 +24,7 @@ secret: 0123456789ABCDEF
 notoken: True
 notokenusr: test
 lnkptvflag: True
-ptvendpoint= http://localhost:8889/checktoken
+ptvendpoint: "http://localhost:8889/checktoken"
 ptvuser: tokenver_user
 ptvpass: tokenver_pass
 ptvdefusr: futuregateway
