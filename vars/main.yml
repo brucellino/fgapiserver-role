@@ -3,6 +3,36 @@
 sys_prereq:
   - mysql-server
   - mysql-devel
+
+# API Server variables
+# The variable name is the variable, with fgapi_server removed.
 # the path to where the web-facing API server will be installed
-api_server_install_path: /tmp/apiserver
-db_password:
+install_path: /tmp/apiserver
+ver: v1.0
+name: "FutureGateway API Server"
+host: 0.0.0.0
+port: 8888
+debug: True
+iosandbox: /tmp
+geappid: 10000
+json_indent: 4
+#key:
+#crt:
+logcfg: fgapiserver_log.conf
+dbver:  0.0.8
+secret: 0123456789ABCDEF
+notoken: True
+notokenusr: test
+lnkptvflag: True
+ptvendpoint= http://localhost:8889/checktoken
+ptvuser: tokenver_user
+ptvpass: tokenver_pass
+ptvdefusr: futuregateway
+ptvmapfile: fgapiserver_ptvmap.json
+
+# fgapiserver database settings
+db_host: localhost
+db_port: 3306
+db_user: fgapiserver
+db_pass: wo6YqaSCp-Ur-Nma4kPp2qJOMXhW_bUg
+db_name: fgapiserver
