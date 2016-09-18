@@ -1,7 +1,7 @@
 FutureGateway API server
 =========
 
-A role to deploy the web-facing API server of the Future Gateway
+A role to deploy the web-facing API server of the Future Gateway. Developed specifically to run inside a container, so no init sorry for you.
 
 Requirements
 ------------
