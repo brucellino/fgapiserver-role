@@ -1,8 +1,8 @@
 ---
 # vars file for fgapiserver
-sys_prereq:
-  - mysql-server
-  - mysql-devel
+# sys_prereq:
+#   - mysql-server
+#   - mysql-devel
 
 # API Server variables
 # The variable name is the variable, with fgapi_server removed.

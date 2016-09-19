@@ -14,10 +14,10 @@
 
 ---
 # tasks file for fgapiserver
-- name: Install mysql dependencies
-  package:
-    name: "{{ sys_prereq }}"
-    state: present
+# - name: Install mysql dependencies
+#   package:
+#     name: "{{ sys_prereq }}"
+#     state: present
 
 - name: get the source code
   git:
@@ -25,6 +25,7 @@
     dest: "{{ install_path }}"
 
 - name: Install URLlib3 (CentOS6)
+  become: true
   pip:
     name: "urllib3[secure]"
     state: present
@@ -38,6 +39,4 @@
   template:
     src: fgapiserver.conf.j2
     dest: "{{ install_path }}/fgapiserver.conf"
-
-
 # - name: start the server
