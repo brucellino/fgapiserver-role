@@ -13,24 +13,25 @@
 #  limitations under the License.
 
 ---
-# tasks file for fgapiserver
-# - name: Install mysql dependencies
-#   package:
-#     name: "{{ sys_prereq }}"
-#     state: present
+- name: Ensure mysql client is present
+  package:
+    name: "{{ item }}"
+  with_items: "{{ prereq[ansible_os_family] }}"
 
 - name: get the source code
   git:
     repo: https://github.com/FutureGateway/fgAPIServer
     dest: "{{ install_path }}"
+    force: true
 
 - name: Install URLlib3 (CentOS6)
   become: true
   pip:
-    name: "urllib3[secure]"
+    name: "{{ item }}"
     state: present
-  when:
-    ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6'
+  with_items: "{{ extra_pips }}"
+  # when:
+  #   ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6'
 - name: install python requirements
   pip:
     requirements: "{{ install_path }}/requirements.txt"
@@ -39,4 +40,3 @@
   template:
     src: fgapiserver.conf.j2
     dest: "{{ install_path }}/fgapiserver.conf"
-# - name: start the server

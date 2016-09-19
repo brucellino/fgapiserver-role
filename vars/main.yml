@@ -7,7 +7,15 @@
 # API Server variables
 # The variable name is the variable, with fgapi_server removed.
 # the path to where the web-facing API server will be installed
-install_path: /tmp/apiserver
+prereq:
+  RedHat:
+    - mysql
+  Debian:
+    - libmysqlclient-dev
+extra_pips:
+  - "urllib3[secure]"
+  - flask_login
+install_path: /root/apiserver
 ver: v1.0
 name: "FutureGateway API Server"
 host: 0.0.0.0
