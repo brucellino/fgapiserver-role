@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brucellino/fgapiserver-role.svg?branch=master)](https://travis-ci.org/brucellino/fgapiserver-role)  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 FutureGateway API server
 =========
 
@@ -11,6 +13,7 @@ uses git. needs some python.
 Role Variables
 --------------
 
+There are several variables which are kept in `vars/main.yml`. The description of the vars can be found in [FutureGateway](https://githu.com/FutureGateway/fgAPIServer) ([hopefully](https://githu.com/FutureGateway/fgAPIServer/issues/9) )
 
 Dependencies
 ------------
@@ -28,7 +31,7 @@ Example Playbook
 License
 -------
 
-Apache-2.0
+Apache-2.0 Copyright C.S.I.R. Meraka Institute
 
 Author Information
 ------------------
