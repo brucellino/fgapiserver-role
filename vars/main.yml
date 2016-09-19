@@ -9,7 +9,7 @@
 # the path to where the web-facing API server will be installed
 prereq:
   RedHat:
-    - mysql
+    - mysql-devel
   Debian:
     - libmysqlclient-dev
 extra_pips:
