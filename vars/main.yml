@@ -21,7 +21,7 @@ name: "FutureGateway API Server"
 host: 0.0.0.0
 port: 8888
 debug: True
-iosandbox: /tmp
+iosandbox: /root
 geappid: 10000
 json_indent: 4
 #key:
