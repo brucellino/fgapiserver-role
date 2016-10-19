@@ -18,7 +18,7 @@ extra_pips:
 install_path: /root/apiserver
 ver: v1.0
 name: "FutureGateway API Server"
-host: 0.0.0.0
+host: "{{ groups['api-server'] | first }}"
 port: 8888
 debug: True
 iosandbox: /root
@@ -39,7 +39,7 @@ ptvdefusr: futuregateway
 ptvmapfile: fgapiserver_ptvmap.json
 
 # fgapiserver database settings
-db_host: localhost
+db_host: "{{ hostvars[groups['db-servers'] | first]['ansible_docker_container']['NetworkSettings']['IPAddress'] }}"
 db_port: 3306
 db_user: fgapiserver
 db_pass: wo6YqaSCp-Ur-Nma4kPp2qJOMXhW_bUg
