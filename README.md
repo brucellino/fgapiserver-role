@@ -13,29 +13,29 @@ uses git. needs some python.
 Role Variables
 --------------
 
-There are several variables which are kept in `vars/main.yml`. The description of the vars can be found in [FutureGateway](https://githu.com/FutureGateway/fgAPIServer) ([hopefully](https://githu.com/FutureGateway/fgAPIServer/issues/9) )
+TODO
 
 Dependencies
 ------------
 
-none
+No other dependencies, but the API server needs a database and the Java GridEngine API connectors to be useful.
 
 Example Playbook
 ----------------
 
-
-    - hosts: api-servers
+- hosts: API-servers
       roles:
          - { role:  brucellino.Future-Gateway-API-Server port: 8888 }
 
 License
 -------
 
-Apache-2.0 Copyright C.S.I.R. Meraka Institute
+BSD
 
 Author Information
 ------------------
 
 Bruce Becker
+http://brucellino.github.io
 @brusisceddu
 http://brucellino.github.io
