@@ -12,22 +12,9 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+# Meant to be run in a container
+
 ---
-
-- name: add API Server container to group
-  add_host:
-    name: api-server
-    groups: api-servers
-
-- name: API container
-  docker_container:
-    name: api-server
-    hostname: api-server
-    image: aaroc/future-gateway-api-server:centos6
-    interactive: true
-    published_ports: all
-    links:
-      - "{{ db_container_name }}"
 - name: Ensure mysql client is present
   become: true
   package:
@@ -36,12 +23,11 @@
 
 - name: get the source code
   git:
-    repo: https://github.com/FutureGateway/fgAPIServer
+    repo: https://github.com/brucellino/fgAPIServer
     dest: "{{ install_path }}"
     force: yes
 
 - name: Install URLlib3 (CentOS6)
-  become: true
   pip:
     name: "{{ item }}"
     state: present
